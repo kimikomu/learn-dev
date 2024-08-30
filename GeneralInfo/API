@@ -1,8 +1,20 @@
-What HTTP Requests Consists of
-    - URL Parameters: /todo/123 (Here, 123 is a URL parameter)
-    - Query Parameters: /todo?status=Completed (Here, status=Completed is a query parameter)
-    - Headers: Authorization: Bearer token123 (Here, Authorization is a header)
-    - Body: { "name": "New Todo", "status": "Pending" } (Here, the JSON object is the body)
-    - Cookies: sessionId=abc123 (Here, sessionId is a cookie)
-    - Method: GET /todo (Here, GET is the HTTP method)
+What are HTTP Requests Constructed From? What creates an API endpoint?
+    - URL Parameters: /todo/123 (Here, 123 is a URL parameter) - part of the url path and often used to identify resources.
+    - Query Parameters: /todo?status=Completed (Here, status=Completed is a query parameter) - key=value pairs appended to the url.
+    - Headers: Authorization: Bearer token123 (Here, Authorization is a header) - Contain metadata about the request, such as authentication tokens and content type.
+    - Body: { "name": "New Todo", "status": "Pending" } (Here, the JSON object is the body) - Often used with POST or PUT methods.
+    - Cookies: sessionId=abc123 (Here, sessionId is a cookie) - small pieces of data stored on the client side and sent with requests.
+    - Method: GET /todo (Here, GET is the HTTP method) - signifies the opperation to be performed.
+
+
+
+Minimal APIs in ASP.Net Core
+A. Binding Sources
+    - Route Values - obtained from url segments.
+    - Query String Values - passed at the end of the url.
+    - Header Values - provided in the HTTP request headers.
+    - Body JSON - a single parameter can be bount to the JSON body of the request.
+    - Globally Available Services - can be bound directly through dependency injection.
+    - Custom Binding - allows access to standard objects such as HTTP request and HTTP context. 
+
 
