@@ -1,0 +1,8 @@
+What HTTP Requests Consists of
+    - URL Parameters: /todo/123 (Here, 123 is a URL parameter)
+    - Query Parameters: /todo?status=Completed (Here, status=Completed is a query parameter)
+    - Headers: Authorization: Bearer token123 (Here, Authorization is a header)
+    - Body: { "name": "New Todo", "status": "Pending" } (Here, the JSON object is the body)
+    - Cookies: sessionId=abc123 (Here, sessionId is a cookie)
+    - Method: GET /todo (Here, GET is the HTTP method)
+
