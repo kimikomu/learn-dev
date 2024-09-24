@@ -42,19 +42,21 @@ public class Solution {
 Solution {
     public int[] FindIntersectionValues(int[] nums1, int[] nums2) {
          
+        // HashSets do not contain duplicate values
         HashSet<int> set1 = new HashSet<int>(nums1);
         HashSet<int> set2 = new HashSet<int>(nums2);
 
         var result = new int[2];
 
-        for(int i = 0; i < nums2.Length; ++i)
+        for(int i = 0; i < nums2.Length; ++i) // loop through nums2 array
         {
-            if(set1.Contains(nums2[i]))
+            if(set1.Contains(nums2[i])) // if hash set1 contains this element from nums2 array
             {
-                result[1]++;
+                result[1]++; // add count to the 2nd int in the results array
             }
         }
 
+        // do the same for nums1 array
         for(int i = 0; i < nums1.Length; ++i)
         {
             if(set2.Contains(nums1[i]))
@@ -63,7 +65,7 @@ Solution {
             }
         }
 
-        return res;
+        return result;
     }
 }
 
@@ -102,7 +104,7 @@ Solution {
 
         // O(n) + O(m) + O(m) +  O(n) = Time Complexity of O(n + m)
 
-        return res;
+        return result;
     }
 }
 
@@ -137,6 +139,6 @@ Solution {
             }
         }
 
-        return res;
+        return result;
     }
 }
