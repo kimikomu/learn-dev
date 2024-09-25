@@ -1,7 +1,11 @@
+//look for **clues**
+
 // Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] 
-// such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+// such that **i != j, i != k, and j != k**, and **nums[i] + nums[j] + nums[k] == 0**.
 
 // Notice that the solution set must not contain duplicate triplets.
+
+// --- In my words: "I need to return all of the unique triplets in the array that sum to 0. I can't use an index more than once in each triplet. ---
 
 // ------------------------------------------
 // Hint #1: So, we essentially need to find three numbers x, y, and z such that they add up to the given value. 
@@ -25,7 +29,7 @@ public class Solution {
         Array.Sort(nums);
         IList<IList<int>> result = new List<IList<int>>();
 
-        // 2. Iterate through each element in the array
+        // 2. Iterate through each element in the array - The "first sum" is "i + something". The for loop takes care of finding all the numbers for the first sum.
         for (int i = 0; i < nums.Length - 2; i++) 
         {
             // Skip duplicates for the first number
@@ -37,7 +41,7 @@ public class Solution {
 
             while (left < right) 
             {
-                int sum = nums[i] + nums[left] + nums[right];
+                int sum = nums[i] + nums[left] + nums[right];    // The "second sum". The while loop and pointers take care of finding all the numbers for the second sum
 
                 if (sum == 0) 
                 {
