@@ -11,13 +11,14 @@ class Solution {
     {
         int length = nums.Length;
 
-        if (length % 2 == 1)    // odd number of elements - return middle
+        if (length % 2 == 1)
         {
+            // Odd number of elements, return the middle element
             return QuickSelect(nums, 0, length - 1, length/2);
         }
         else
         {
-            // For an even number of elements, return the average of the two middle elements.
+            // Even number of elements, return the average of the two middle elements
             int leftMiddleNum = QuickSelect(nums, 0, length - 1, length/2 - 1);
             int rightMiddleNum = QuickSelect(nums, 0, length - 1, length/2);
 
@@ -25,7 +26,7 @@ class Solution {
         }
     }
 
-    // QuickSelect function to find the k-th smallest element
+    // QuickSelect function to find the k-th smallest element. Recursive.
     // Takes the array, the first and last index of the array, and the last index of half of the array length.
     public static int QuickSelect(int[] nums, int left, int right, int k)
     {
