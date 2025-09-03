@@ -23,37 +23,37 @@ public class Solution
     //       original list is odd, pair the center element with 0.
     // output: Return a list of the tuples.
     public static List<(int, int)> Solve(List<int> numbers)
-    {    
+    {
         List<(int, int)> tuples = new List<(int, int)>();
-        
+
         if (numbers.Count == 1)
         {
             tuples.Add((numbers[0], 0));
             return tuples;
         }
-        
+
         // get the middle number
         int mid = numbers.Count / 2;
-        
+
         // get the left and right numbers
         int left = mid - 1;
         int right = mid;
-        
+
         // if numbers is odd, move right over one, add mid number and 0 as a tuple to list
         if (numbers.Count % 2 == 1)
         {
             tuples.Add((numbers[mid], 0));
             right = mid + 1;
         }
-        
+
         // loop moving center out
         while (left >= 0 && right < numbers.Count)
         {
             tuples.Add((numbers[left], numbers[right]));
             left--;
             right++;
-        }            
-        
+        }
+
         return tuples;
     }
 }
