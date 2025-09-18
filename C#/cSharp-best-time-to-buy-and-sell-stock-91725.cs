@@ -60,7 +60,7 @@ public class Solution
 
 
 
-    // DYNAMIC
+    // WHOA
     public int MaxProfit(int[] prices) {
 
         int minPrice = int.MaxValue;
